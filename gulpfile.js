@@ -30,11 +30,10 @@ gulp.task('styles', function () {
  */
 gulp.task('scripts', function () {
   return gulp
-    .src('src/_scripts/**/*.js')
+    .src('src/_scripts/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest('src/js'))
-    .pipe(gulp.dest('_site/js'));
+    .pipe(gulp.dest('src/js'));
 });
 
 /**
@@ -70,8 +69,7 @@ gulp.task('sassmin', function () {
   gulp.src('src/_scss/main.scss')
     .pipe(prefix(['last 3 versions', '> 1%']))
     .pipe(cssmin())
-    .pipe(gulp.dest('src/css'))
-    .pipe(gulp.dest('_site/css'));
+    .pipe(gulp.dest('src/css'));
 });
 
 /*

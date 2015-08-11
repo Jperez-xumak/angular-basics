@@ -1,7 +1,22 @@
 ---
 layout: default
 ---
+{% raw %}
+<div class="container">
+	
+	<div class="row" ng-controller="GalleryController as galCtrl">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="gal in gallery">
+			<div class="card">
+			  <img class="card__image" ng-src="{{gal.image}}" alt="">
+			  <h2 class="card__title">{{gal.painting}} | {{gal.artist}}</h2>
+			  <p class="card__brief">
+			  	{{gal.excerpt}}
+			  </p>
+			  <a class="card__btn" href="">Check complete info</a>
+			</div>
+		</div>
+	</div>
 
-<div>
-  Hello World
 </div>
+{% endraw %}
+
